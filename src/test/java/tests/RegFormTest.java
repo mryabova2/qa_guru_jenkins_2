@@ -21,7 +21,6 @@ public class RegFormTest {
     @BeforeAll
     static void ChromeSetUp () {
         Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
     }
 
@@ -50,7 +49,7 @@ public class RegFormTest {
                 city = "Agra",
                 stateCity = format("%s %s", state, city);
 
-        open("/automation-practice-form");
+        open("https://demoqa.com/automation-practice-form");
         executeJavaScript("document.querySelector(\"footer\").hidden = 'true';document.querySelector(\"#fixedban\").hidden = 'true'");
 
         $("#firstName").setValue(firstName);
