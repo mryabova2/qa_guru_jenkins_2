@@ -21,7 +21,7 @@ public class TestBase {
     }
 
     @AfterEach
-    static void addAttachments (){
+     void addAttachments (){
         Attach.screenshotAs("Screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
