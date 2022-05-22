@@ -9,5 +9,4 @@ public class Owner {
 
         static String login = config.login();
         static String password = config.password();
-        static String remote = "https://" + login +":" + password + "@selenoid.autotests.cloud/wd/hub";
 }
