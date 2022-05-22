@@ -17,7 +17,7 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.baseUrl = Properties.baseUrl;
         Configuration.browserSize = Properties.browserSize;
-        Configuration.remote = Properties.remote;
+        Configuration.remote = "https://" + Owner.login + ":" + Owner.password + Properties.remote;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
