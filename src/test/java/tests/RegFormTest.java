@@ -1,13 +1,12 @@
 package tests;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static java.lang.String.format;
+
 
 @Tag("demoqa")
 
@@ -82,5 +81,24 @@ public class RegFormTest extends TestBase {
                     .parent().shouldHave(text(stateCity));
         });
     }
+
+    @Test
+    @DisplayName("Failed test")
+    void failedTest(){
+        Assertions.assertTrue(false);
+    }
+    @Test
+    @DisplayName("Failed test1")
+    void failedTest1(){
+        Assertions.assertEquals(3,2);
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("Disabled Test")
+    void disabledTest(){
+        open("/automation-practice-form");
+    }
 }
+
 
